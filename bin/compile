@@ -79,8 +79,8 @@ if [ ! -f $CACHE_DIR/env.tar.gz ]; then
 fi
 subtitle "Unpacking..."
 tar -xzf $CACHE_DIR/env.tar.gz -C $BUILD_DIR
-ls -l $CACHE_DIR
-ls -l $BUILD_DIR
+ls -a $CACHE_DIR
+ls -a $BUILD_DIR
 
 
 # installing application dependencies
