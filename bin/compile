@@ -72,12 +72,14 @@ export PYTHONPATH="$HOME/usr/local/lib:$BUILD_DIR/.heroku/vendor/lib/python2.7/s
 rm -rf $CACHE_DIR
 mkdir -p $CACHE_DIR
 title "Generating environment"
-if [ -f $BUILD_DIR/requirement.txt ]; then
+if [ ! -f $CACHE_DIR/env.tar.gz ]; then
 	subtitle "Fetching..."
     curl -s -L "https://dl.dropboxusercontent.com/s/05g34dysuyqwlnj/1.tar.gz?dl=0" > $CACHE_DIR/env.tar.gz
 fi
 subtitle "Unpacking..."
 tar -xzf $CACHE_DIR/env.tar.gz -C $BUILD_DIR
+
+ls -l $BUILD_DIR
 
 
 # installing application dependencies
