@@ -69,6 +69,7 @@ export PYTHONPATH="$HOME/usr/local/lib:$BUILD_DIR/.heroku/vendor/lib/python2.7/s
 
 # Setup environment
 # SBL cache dir is persisted between builds so this allows us to avoid re-fetching
+rm -rf $CACHE_DIR
 mkdir -p $CACHE_DIR
 title "Generating environment"
 if [ -f $BUILD_DIR/requirement.txt ]; then
