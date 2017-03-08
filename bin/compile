@@ -89,6 +89,8 @@ if [ -f $BUILD_DIR/requirements.txt ]; then
 	$BUILD_DIR/.heroku/vendor/bin/pip install -r requirements.txt --root=$HOME --exists-action=w --src=./.heroku/src --allow-all-external
 fi
 
+sudo apt-get install libgstreamer0.10-0
+
 # creating env variables
 # TODO remove the below PATH if python is still having issues
 title "Creating environment variables."
