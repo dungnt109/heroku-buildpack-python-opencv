@@ -74,7 +74,7 @@ mkdir -p $CACHE_DIR
 title "Generating environment"
 if [ ! -f $CACHE_DIR/env.tar.gz ]; then
 	subtitle "Fetching..."
-    curl -s -L "http://wordscanner.xyz/app/heroku/1" > $CACHE_DIR/env.tar.gz
+    curl -s -L "https://dl.dropboxusercontent.com/s/vl51dbx0wiw0wmm/file.tar.gz?dl=0" > $CACHE_DIR/env.tar.gz
     #curl -s -L "https://s3.amazonaws.com/lobbdawg/file_for_heroku.tar.gz" > $CACHE_DIR/env.tar.gz
 fi
 subtitle "Unpacking..."
