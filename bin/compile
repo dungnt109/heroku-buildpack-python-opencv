@@ -82,6 +82,9 @@ tar -xzf $CACHE_DIR/env.tar.gz -C $BUILD_DIR
 ls -a $CACHE_DIR
 ls -a $BUILD_DIR
 
+export LD_LIBRARY_PATH="\$HOME/.heroku/vendor/lib/:\$HOME/.heroku/vendor/lib/:\$LD_LIBRARY_PATH"
+export PATH="\$HOME/usr/local/bin:\$HOME/.heroku/vendor/bin:\$PATH"
+export PYTHONPATH="\$HOME/usr/local/lib/python2.7/site-packages/:\$HOME/.heroku/vendor/lib/:\$HOME/.heroku/vendor/lib/python2.7/dist-packages/"
 
 # installing application dependencies
 if [ -f $BUILD_DIR/requirements.txt ]; then
